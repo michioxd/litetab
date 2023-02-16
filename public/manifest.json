@@ -1,0 +1,15 @@
+{
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "default_locale": "en",
+    "description": "chrome light tab",
+    "homepage_url": "https://litetab.github.io",
+    "icons": {
+        "128": "images/128.png"
+    },
+    "manifest_version": 2,
+    "name": "litetab",
+    "version": "0.1"
+}
