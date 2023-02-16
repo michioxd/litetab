@@ -5,7 +5,7 @@
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "default_locale": "en",
     "description": "chrome light tab",
-    "homepage_url": "https://litetab.github.io",
+    "homepage_url": "https://michioxd.github.io/litetab",
     "icons": {
         "128": "images/128.png"
     },
