@@ -1,0 +1,117 @@
+.Setting {
+    .SettingOverlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 99;
+        background: var(--setting-overlay-bg);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+
+    .SettingMain {
+        width: 500px;
+        height: 100%;
+        position: fixed;
+        z-index: 999;
+        background: var(--setting-main-bg);
+        display: flex;
+        flex-direction: row;
+        backdrop-filter: blur(20px);
+        border-radius: 0px 20px 20px 0px;
+        opacity: 0;
+        visibility: hidden;
+        left: -100px;
+        transition: 0.4s;
+
+        .SettingMenu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            background: var(--setting-menu-bg);
+            border-radius: 0px 20px 20px 0px;
+            overflow-y: overlay;
+            overflow-x: hidden;
+            width: calc(30px + 2.2rem);
+            transition: .3s;
+            flex: none;
+
+            .Item {
+                width: 100%;
+                padding: .5rem .5rem;
+                padding-right: 1rem;
+                display: flex;
+                align-items: center;
+                transition: .2s;
+                margin-left: .5rem;
+                border-radius: 8px 0px 0px 8px;
+                cursor: pointer;
+
+                .icons {
+                    margin-right: .5rem;
+                    font-size: 30px;
+                    opacity: .8;
+                }
+
+                &:hover {
+                    background: var(--setting-main-bg);
+
+                    .icons {
+                        opacity: 1;
+                    }
+                }
+
+                .text {
+                    opacity: 0;
+                    transition: .3s;
+                }
+            }
+
+            &:hover {
+                width: calc(150px + 1rem);
+
+                .Item {
+                    .text {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .SettingContent {
+            overflow: auto;
+            padding: 1rem;
+            padding-bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .Content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: .5rem;
+
+                .Center {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &.Open {
+        .SettingMain {
+            opacity: 1;
+            visibility: visible;
+            left: 0px;
+        }
+
+        .SettingOverlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+}
